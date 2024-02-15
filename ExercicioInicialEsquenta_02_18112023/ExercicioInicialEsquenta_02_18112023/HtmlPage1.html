@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Olá, Mundo!</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Felipe Kenzo"/>
+    <meta name="description" content="Exemplo página Hello World"/>
+    <meta name="keywords" content="Palavras chaves para mecanismos de pesquisa"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style> 
+    </style>
+</head>
+<body>
+    <h1>1 - Introdução</h1>
+    <h2>1.1 - Contextualização</h2>
+    <h3>1.1.1 - O problema</h3>
+    <p>
+        Este é o primeio parágrafo. Nele, você encontrará as primeiras linhas de texto da página.<br />
+        Com esse texto, uma nova linha irá aparecer.
+    </p>
+    <p>
+        Este é o segundo parágrafo
+    </p>
+    <p>
+        <strong>Este é um texto em negrito.</strong><br />
+        <b>Este é em texto em negrito com B.</b><br />
+        <em>Este é um texto em itálico.</em><br />
+        <i>Este é um texto em itálico com I.</i><br />
+        <u>Este é um texto sublinhado.</u><br />
+        <s>Este é um texto riscado</s><br />
+         X<sub>A</sub><sup>2</sup> + X = 10
+    </p>
+    <pre>
+        public class Teste {
+            private int t1;
+        }
+    </pre>
+    <p>
+        Para criar um objeto, use: <code>Teste c = new Teste();</code> 
+    </p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <ul>
+        <li>Sublista 1</li>
+        <ul>
+            <li>SubItem 1</li>
+            <li>SubItem 2</li>
+        </ul>
+        <li>Item 2</li>
+    </ul>
+    <span>Esta é a área de conteúdo</span>
+    <div>Esta é outra área de texto</div>
+    <a href="https://www.uol.com.br"
+        title="parei o mouse para o link"
+        target="_blank">
+        Clique para abrir o UOL em outra Janela(Blank) <br />
+    </a>
+    <a href="https://www.uol.com.br"
+        title="parei o mouse para o link">
+        Clique para abrir o UOL em outra Janela(Sem Target) <br />
+    </a>
+    <a href="https://www.uol.com.br"
+        title="parei o mouse para o link"
+        target="_parent">
+        Clique para abrir o UOL em outra Janela(Parent) <br />
+    </a>
+    <a href="https://www.uol.com.br"
+        title="parei o mouse para o link"
+        target="_self">
+        Clique para abrir o UOL em outra Janela(Self) <br />
+    </a>
+    <a href="https://www.uol.com.br"
+        title="parei o mouse para o link"
+        target="_top">
+        Clique para abrir o UOL em outra Janela(top) <br />
+    </a>
+    <img src="https://via.placeholder.com/120x120"
+        alt="Uma imagem com o conteúdo 120x120"
+        usemap="#mapa"/>
+    <map name="mapa">
+        <area target="_blank"
+            alt="parei o mouse no link"
+            title="parei o mouse no link"
+            href="https://www.uol.com.br"
+            shape="rect"
+            coords="10,10,110,110"/>
+    </map>
+    <table>
+        <tr>
+            <td>Minha Div</td>
+            <td>Minha Span</td>
+        </tr>
+        <tr>
+            <td>Esta é uma área de texto</td>
+            <td>Esta é uma área de conteúdo</td>
+        </tr>
+        <tr>
+            <td colspan="2">Meu Rodapé</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>CPF</td>
+            <td>Nome</td>
+            <td class="auto-style1">Telefone</td>
+        </tr>
+        <tr>
+            <td rowspan="2">012.345.678-90</td>
+            <td>João da Silva</td>
+            <td>(11) 4699-2790</td>
+        </tr>
+        <tr>
+            <td colspan="2">Maria da Silva</td>
+        </tr>
+    </table>
+    <form action="http://www.uol.com.br" method="get">
+        <label for="campoCPF">CPF:</label>
+        <input id="campoCPF" type="text" name="cpf" placeholder="Informe o seu CPF"/><br /> <br />
+        <label for="data">Data:</label>
+        <input id="data" type="date" name="DataNascimento"/><br /> <br />
+        <label for="clienteDesde">Cliente Desde:</label>
+        <input type="checkbox" name="eMacho" value="eSim"/><br /> <br />
+        <label for="masculino">Masculino</label>
+        <input id="masculino" type="radio" name="genero"/><br /> <br />
+        <label for="feminino">Feminino</label>
+        <input id="feminino" type="radio" name="genero"/><br /> <br />
+        <input type="file" name="arquivo"/><br /> <br /> 
+        <input type="reset"/><br /> <br />
+        <input type="button" name="botaoNada" value="Clique aqui para não fazer nada!"/><br /> <br />
+        <input type="submit" name="botaoEnviar" value="Clique aqui para enviar os dados" /><br /> <br />
+    </form>
+        <button type="button">
+            Texto qualquer.<br />
+            <img src="http://via.placeholder.com/100x100"/>
+        </button>
+        <br /> <br />
+        <textarea name="descricao" rows="5" cols="10">
+            Conteúdo
+        </textarea>
+        <br /> <br />
+        <select name="estado">
+            <option value="MG">Minas Gerais</option>
+            <option value="SP">São Paulo</option>
+            <option value="ES">Espírito Santo</option>
+        </select>
+</body>
+</html>
