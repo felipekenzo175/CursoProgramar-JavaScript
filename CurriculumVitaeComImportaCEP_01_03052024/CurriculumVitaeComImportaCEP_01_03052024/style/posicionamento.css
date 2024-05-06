@@ -1,0 +1,77 @@
+﻿body {
+    color: black;
+    text-align: center;
+}
+
+#conteiner {
+    background-color:rgb(240,240,240);
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    text-align: left;
+    width: 80%;
+    min-width: 400px;
+}
+
+#foto img {
+    border: 2px solid #333;
+}
+
+#endereco {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+.clear {
+    clear: both;
+}
+
+#conteudo {
+    margin: 0 auto 0 auto;
+    width: 95%;
+}
+
+.rotulo {
+    display: block;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+}
+
+#elementoFlutuante {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+table, table th, table td {
+    border: 5px solid #f00;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(odd), table tr:nth-child(odd) td{
+    background-color: black !important;
+    color: white;
+}
+
+p::first-letter {
+    color: red;
+}
+
+li:hover {
+    background-color: blue;
+    color: white;
+}
+
+li ul {
+    display: none;
+}
+
+li:hover ul {
+    display: block;
+}
+
+input:focus {
+    background-color: cyan;
+}
