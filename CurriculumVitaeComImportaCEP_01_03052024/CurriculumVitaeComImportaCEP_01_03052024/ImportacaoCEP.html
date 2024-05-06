@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pesquisa - CEP</title>
+    <style>
+        label {
+            display:block;
+        }
+
+        #carregando {
+            display: none;
+        }
+    </style>
+    <script>
+        function consultarDadosPeloCEP() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        var resposta = this.responseText;
+                        var objetoResposta = JSON.parse(resposta);
+                        document.getElementById("uf").value = objetoResposta.uf;
+                        document.getElementById("cidade").value = objetoResposta.cidade;
+                        document.getElementById("bairro").value = objetoResposta.bairro;
+                        document.getElementById("logradouro").value = objetoResposta.logradouro;
+                    }
+                    document.getElementById("carregando").style.display = "none";
+                }
+            }
+            var conteudoCEP = document.getElementById("cep").value;
+            xhttp.open("GET", "http://cep.republicavirtual.com.br/web_cep.php?cep=" + conteudoCEP + "&formato=json", true);
+            xhttp.send();
+            document.getElementById("carregando").style.display = "inline-table";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>Informe o CEP e clique sobre o botão Pesquisar para que os outros campos sejam preenchidos automaticamente.</p>
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" placeholder="Ex:08717130"/> <input type="button" value="Pesquisar" onclick="consultarDadosPeloCEP()"/>
+        <div id="carregando"><img src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"/></div>
+        <br />
+        <label for="uf">Estado:</label> <input type="text" name="uf" id="uf"/>
+        <br />
+        <label for="cidade">Cidade:</label> <input type="text" name="cidade" id="cidade"/>
+        <br />
+        <label for="bairro">Bairro:</label> <input type="text" name="bairro" id="bairro"/>
+        <br />
+        <label for="logradouro">Logradouro:</label> <input type="text" name="logradouro" id="logradouro"/>
+        <br />
+        <p>
+            <input type="reset"/>
+        </p>
+    </form>
+</body>
+</html>

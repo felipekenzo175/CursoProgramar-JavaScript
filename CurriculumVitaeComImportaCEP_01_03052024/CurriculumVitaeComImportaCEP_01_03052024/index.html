@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CV FKNO</title>
+    <meta name="author" content="Felipe Kenzo Nonaka Ojima"/>
+    <meta name="description" content="CV de Felipe Kenzo"/>
+    <meta charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#enderecoJQ").blur(function () {
+                var campoEnderecoJQ = $("#enderecoJQ");
+                if ($("#enderecoJQ").val().trim() == "") {
+                    campoEnderecoJQ.css("background-color", "lightcyan");
+                    $("#enderecoJQ").css("border", "3px solid red");
+                    $("#nome").val($("#identificacao").html().toString());
+                    $("#nome").css({"background-color":"#fff", "border": "", "display": "block", "width": "50%Important"})
+                } else {
+                    $("#enderecoJQ").css("background-color", "lightgreen");
+                    campoEnderecoJQ.css("border", "3px solid blue");
+                    $("#nome").val("Felipe Kenzo Nonaka Ojima");
+                    $("#nome").css({
+                        "background-color": "rgb(240,240,240)", "border": "2px solid #333", "display": "block", "width": "100%"
+                    })
+                }
+            })
+        });
+
+        $("alterarConteudoJQ").on("click", function () {
+            $("#nome").val("Felipe Kenzo Nonaka Ojima");
+            $("#identificacao").html($("#nome").val());
+        });
+
+        function validarNome() {
+            var campoNome = document.getElementById("nome");
+            if (campoNome.value.trim() == "") {
+                campoNome.style.border = "3px solid red";
+            } else {
+                campoNome.style.border = "";
+            }
+        }
+
+        function alterarNome() {
+            document.getElementById("nome").value = "Felipe Kenzo Nonaka Ojima";
+            document.getElementById("identificacao").innerHTML = document.getElementById("nome").value;
+        }
+
+        function atualizarPosicao(e) {
+            var divzoon = document.getElementById("zoom");
+            divzoon.style.display = "block";
+            divzoon.style.top = (e.clientY + 12) + "px";
+            divzoon.style.left = (e.clientX + 12) + "px";
+            var deltaX = (e.clientX);
+            var deltaY = (e.clientY);
+            deltaX *= -1;
+            deltaY *= -1;
+            deltaX += 262;
+            deltaY += 172;
+
+            document.getElementById("imagemZoom").style.backgroundPosition = deltaX + "px " + deltaY + "px";
+        }
+    </script>
+    <style>
+        .zoom {
+            display: none;
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 3px inset #fff;
+        }
+
+        #imagemZoom {
+            -webkit-transform: scale(3);
+            transform: scale(3);
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            background-image: url(imagens/Felipe.jpeg);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+        }
+
+        .img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="style/posicionamento.css"/>
+</head>
+<body>
+    <h1><u>Curriculum Vitae</u></h1>
+    <div id="elementoFlutuante">
+        <img src="http://via.placeholder.com/200x200" alt="Imagem 200x200" />
+    </div>
+
+    <div id="conteiner">
+        <div id="foto">
+            <p>
+                <img src="imagens/Felipe.jpeg" alt="Foto de Felipe Kenzo" class="img" onmousemove="atualizarPosicao(event)"/>
+            </p>
+            <div id="zoom" class="zoom">
+                <div id="imagemZoom">
+                </div>
+            </div>
+            <div id="identifica">
+                <h2 id="identificacao">Felipe Kenzo Nonaka Ojima</h2>
+            </div>
+        </div>
+
+        <div id="endereco">
+            <p>Rua Doutor Gabriel Prestes, 175</p>
+            <p>Mogi Moderno - Mogi das Cruzes - SP</p>
+            <p>Telefone: (11)98204-0729</p>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="conteudo">
+            <h2>1.Objetivos</h2>
+            <p>Analista Programador Full Stack Dev.</p>
+
+            <h2>2.Formação Acadêmica</h2>
+            <ul>
+                <li>Ano: 2024 Curso: Curso de Formação Green Belt Six Sigma</li>
+                <li>Ano: 2024 Curso: Curso de Formação de Programadores de Excelência em Automação Bancária e Comercial - Java, c#.net, Python, JavaScript - Ministrado por Roberto Scarcelli Pelinson Toscano Costa</li>
+                <li>Ano: 2023 Curso: Análise e Desenvolvimento de Sistemas</li>
+                <li>Ano: 2020 Curso: Técnico em Mecatrônica</li>
+            </ul>
+            <h3>2.1. Tabela Formação Acadêmica</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Ano</td>
+                        <td>Curso</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Green Belt Six Sigma</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>Curso Programar</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Tecnólogo em Análise e Desenvolvimento de Sistemas</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>Técnico em Mecatrônica</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3. Experiência Profissional</h2>
+            <ul>
+                <li>Ano: 2024 Função: Professor Estagiário de Programação</li>
+            </ul>
+
+            <h3>3.1. Tabela de Experiência Profissional</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Ano</td>
+                        <td>Função</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Professor Estagiário</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table class="treco">
+                <thead>
+                    <tr>
+                        <td class="treco">ANO</td>
+                        <td class="treco">DISCIPLINA</td>
+                        <td class="treco">CURSO</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="treco">2020</td>
+                        <td class="treco">WEBFORMS</td>
+                        <td class="treco">PROGRAMAÇÃO AUTB</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table id="preferencias">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>DESCRICAO</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pai Celestial</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jesus Cristo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Família</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Amigos</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="idioma" id="idiomas">5. Idiomas</h2>
+            <p class="idioma outra-classe">Inglês - Intermediário</p>
+
+            <h2>6. Entre em Contato</h2>
+            <form action="ImportacaoCEP.html" method="get">
+                <p>Deixe o campo "Nome" vazio e tire o foco dele. Agora, preencha-o e faça a mesma coisa.</p>
+                <label for="nome" class="rotulo" accesskey="u">
+                    Se<u>u</u> Nome:
+                </label>
+                <input id="nome" type="text" name="nome"
+                    value="Nome Atual"
+                    placeholder="Informe o seu nome completo"
+                    onblur="validarNome()"/>
+                <br />
+                <label for="enderecoJQ" class="rotulo" accesskey="u">
+                    Se<u>u</u> Endereço:
+                </label>
+                <input id="enderecoJQ" type="text" name="enderecoJQ"
+                    value="Endereço Atual"
+                    placeholder="Informe o seu endereço para cadastro"/>
+                <br />
+                <label for="assunto" class="rotulo">Assunto:</label>
+                <select name="assunto" id="assunto">
+                    <option value="-1">Selecione uma das opções...</option>
+                    <option value="0">Dúvida</option>
+                    <option value="-1" selected="selected">Sugestão</option>
+                </select>
+                <br />
+                <label class="rotulo">Gênero:</label>
+                <input type="radio" name="genero" id="masculino"/>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="genero" id="feminino"/>
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="genero" id="outro"/>
+                <label for="outro">Outro</label>
+                <br />
+                <input type="checkbox" name="quero_cadastrar" id="cadastrar" checked="checked"/>
+                <label for="cadastrar">Quero me cadastrar na newsletter</label>
+                <br />
+                <label for="mensagem" class="rotulo">Sua mensagem:</label>
+                <textarea name="mensagem" id="mensagem">Conteúdo Atual</textarea>
+                <br />
+                <input type="button" name="alterarConteudo" id="alterarConteudo" value="Alterar Nome" onclick="alterarNome()"/>
+                <br />
+                <input type="button" name="alterarConteudoJQ" id="alterarConteudoJQ" value="Alterar Nome (JQuery)"/>
+                <br />
+                <input type="submit" name="enviar" value="Enviar"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
