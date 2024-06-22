@@ -1,0 +1,5 @@
+C:\Curso Programar\JavaScript\Maratona_23_15062024\Maratona_23_15062024\bin\Maratona_23_15062024.dll
+C:\Curso Programar\JavaScript\Maratona_23_15062024\Maratona_23_15062024\bin\Maratona_23_15062024.pdb
+C:\Curso Programar\JavaScript\Maratona_23_15062024\Maratona_23_15062024\obj\Debug\Maratona_23_15062024.csprojResolveAssemblyReference.cache
+C:\Curso Programar\JavaScript\Maratona_23_15062024\Maratona_23_15062024\obj\Debug\Maratona_23_15062024.dll
+C:\Curso Programar\JavaScript\Maratona_23_15062024\Maratona_23_15062024\obj\Debug\Maratona_23_15062024.pdb

@@ -1,0 +1,133 @@
+﻿#conteiner {
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+
+#logo {
+    float: left;
+}
+
+#dataHora {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#menu {
+    background-color: black;
+}
+
+.itemMenu {
+    display: inline-table;
+    line-height: 2em;
+    text-align: center;
+    width: 32%;
+}
+
+.itemMenu a {
+    color: white;
+    text-decoration: none;
+}
+
+#destaque {
+    float: left;
+    margin-left: 2em;
+    min-width: 400px;
+    text-align: center;
+    width: 400px;
+}
+
+#noticias {
+    float: left;
+    width: auto;
+}
+
+#noticia {
+    height: 180px;
+    width: 100%;
+}
+
+#ultimasNoticias {
+    background-color: black;
+    color: white;
+    height: 2em;
+}
+
+#galeria {
+    text-align: center;
+}
+
+#galeria img {
+    width: 100%;
+}
+
+#form {
+    width: 45%;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    float: right;
+}
+
+#cep-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cep {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+#cep-container input[type="button"] {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}
+
+#dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 45%;
+}
+
+    .column label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .column input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+input[type="reset"] {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+
